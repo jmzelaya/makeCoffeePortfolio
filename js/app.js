@@ -77,7 +77,7 @@ $(document).ready(function() {
   var ajaxReq = function () {
       $.ajax({
           data: 'payload=' + JSON.stringify({
-              "text": text
+              "text": text()
           }),
           dataType: 'json',
           processData: false,
@@ -88,7 +88,6 @@ $(document).ready(function() {
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
-    text();
     //Update the h2 with the var
     $('h2').text(todaysVictim);
     //Add the animation and do it EVERY time the button is clicked
