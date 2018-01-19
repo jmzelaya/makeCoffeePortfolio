@@ -100,7 +100,3 @@ $(document).ready(function() {
 
 
 });
-
-
-//POSSIBLE FIX?
-//Use setTimeout for location.reload();
