@@ -85,7 +85,6 @@ $(document).ready(function() {
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
-    makeCoffee(pickRandom);
     //Update the h2 with the var
     $('h2').text(todaysVictim);
     //Add the animation and do it EVERY time the button is clicked
@@ -93,7 +92,8 @@ $(document).ready(function() {
       $('h2').removeClass('tada');
     });
     //Call the AJAX and send :)
-    ajaxReq();
+    ajaxReq(makeCoffee(pickRandom)
+);
   });
 
 });
