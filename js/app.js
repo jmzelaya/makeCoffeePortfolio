@@ -66,7 +66,7 @@ $(document).ready(function() {
   };
 
   //Call the function
-  // makeCoffee(pickRandom);
+  makeCoffee(pickRandom);
 
 
   var url = "https://hooks.slack.com/services/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";
@@ -92,8 +92,7 @@ $(document).ready(function() {
       $('h2').removeClass('tada');
     });
     //Call the AJAX and send :)
-    ajaxReq(makeCoffee(pickRandom)
-);
+    ajaxReq();
   });
 
 });
