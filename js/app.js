@@ -70,8 +70,8 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
-  var text = "TESTING2-->" + " ☕️ Time for " + todaysVictim + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
-  var ajaxReq = function () {
+  var text = "TESTING3-->" + " ☕️ Time for " + todaysVictim + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+  var ajaxReq = function (func) {
       $.ajax({
           data: 'payload=' + JSON.stringify({
               "text": text
@@ -93,9 +93,9 @@ $(document).ready(function() {
       $('h2').removeClass('tada');
     });
     //Call the AJAX and send :)
+    ajaxReq(makeCoffee(pickRandom));
   });
-  
-  ajaxReq();
+
 
 });
 
