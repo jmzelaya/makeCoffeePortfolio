@@ -71,7 +71,7 @@ $(document).ready(function() {
 
   var url = "https://hooks.slack.com/services/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";
   var text = function () {
-    return "TESTING6-->" + " ☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+    return "TESTING7-->" + " ☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
   };
 
   var ajaxReq = function () {
