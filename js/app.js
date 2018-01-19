@@ -88,14 +88,14 @@ $(document).ready(function() {
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
+    //Call the AJAX and send :)
+    ajaxReq();
     //Update the h2 with the var
     $('h2').text(todaysVictim);
     //Add the animation and do it EVERY time the button is clicked
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
       $('h2').removeClass('tada');
     });
-    //Call the AJAX and send :)
-    ajaxReq();
   });
 
 
