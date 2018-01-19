@@ -70,7 +70,7 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
-  var text = "TESTING3-->" + " ☕️ Time for " + todaysVictim + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+  var text = "TESTING4-->" + " ☕️ Time for " + todaysVictim + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
   var ajaxReq = function (func) {
       $.ajax({
           data: 'payload=' + JSON.stringify({
@@ -85,7 +85,6 @@ $(document).ready(function() {
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
-    makeCoffee(pickRandom);
     //Update the h2 with the var
     $('h2').text(todaysVictim);
     //Add the animation and do it EVERY time the button is clicked
