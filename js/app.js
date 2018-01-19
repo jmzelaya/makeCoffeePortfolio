@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //The array of victims
   var victims = ["Erick", "John", "Abdala", "Landy", "Manny"];
 
   //Create a new Date object
@@ -13,7 +14,7 @@ $(document).ready(function() {
   var pickRandom = function (){
     todaysVictim = victims[Math.floor(Math.random() * victims.length)];
     return todaysVictim;
-  };
+  };//CLOSE pickRandom
 
   var makeCoffee = function (person) {
     //Call the function
@@ -62,15 +63,14 @@ $(document).ready(function() {
       return todaysVictim;
     }
 
-
-  };
+  };//CLOSE makeCoffee
 
   //Call the function
-  makeCoffee(pickRandom);
+  // makeCoffee(pickRandom);
 
 
   var url = "https://hooks.slack.com/services/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";
-  var text = "☕️ Time for " + todaysVictim + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+  var text = "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
   var ajaxReq = function () {
       $.ajax({
           data: 'payload=' + JSON.stringify({
@@ -96,3 +96,7 @@ $(document).ready(function() {
   });
 
 });
+
+
+//POSSIBLE FIX?
+//Use setTimeout for location.reload();
