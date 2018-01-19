@@ -70,6 +70,10 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
+  var text = function () {
+    return "TESTING6-->" + " ☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+  };
+
   var ajaxReq = function () {
       $.ajax({
           data: 'payload=' + JSON.stringify({
@@ -84,8 +88,7 @@ $(document).ready(function() {
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
-    var text = "TESTING5-->" + " ☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
-    ajaxReq();
+    text();
     //Update the h2 with the var
     $('h2').text(todaysVictim);
     //Add the animation and do it EVERY time the button is clicked
@@ -93,6 +96,7 @@ $(document).ready(function() {
       $('h2').removeClass('tada');
     });
     //Call the AJAX and send :)
+    ajaxReq();
   });
 
 
