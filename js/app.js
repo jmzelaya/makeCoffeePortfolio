@@ -70,13 +70,16 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
+
   var text = function () {
+    //Return the message calling the function which returns todaysVictim
     return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
   };
 
   var ajaxReq = function () {
       $.ajax({
           data: 'payload=' + JSON.stringify({
+              //Call the text function
               "text": text()
           }),
           dataType: 'json',
@@ -88,7 +91,7 @@ $(document).ready(function() {
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
-    //Call the AJAX and send :)
+    //Call the AJAX and send FIRSTs
     ajaxReq();
     //Update the h2 with the var
     $('h2').text(todaysVictim);
