@@ -73,7 +73,9 @@ $(document).ready(function() {
 
   var text = function () {
     //Return the message calling the function which returns todaysVictim
-    return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+    // return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+    return "🥜 Time for Salty Nutz to make café. 🥜 Maaaaaaannnniiiiiiiii 🥜 ";
+
   };
 
   var ajaxReq = function () {
